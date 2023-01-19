@@ -2,14 +2,15 @@
   "name": "gateway",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "start": "npm run build && node build/index.js",
-    "dev": "npx nodemon",
+    "dev": "nodemon src/index.ts",
     "build": "rimraf ./build && tsc"
   },
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "express-http-proxy": "^1.6.3"
   },

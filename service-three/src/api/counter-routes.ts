@@ -15,7 +15,7 @@ router.get("/", async (req, res) => {
 router.put("/inc", async (req, res) => {
   const counter = await counterService.increment(req.body.by);
 
-  axios.post("http://localhost:8000/app-event/updateCounterTwo", {
+  axios.post("http://localhost:8000/app-event/updateCounterThree", {
     payload: counter,
   });
 

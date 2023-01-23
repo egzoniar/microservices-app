@@ -1,16 +1,25 @@
-import express from "express";
-import dotenv from "dotenv";
+import app from "./api/app-routes";
 
-dotenv.config();
-const PORT = process.env.PORT;
+import config from "./config";
 
-const app = express();
-app.use(express.json());
+// app.use("/app-event", (req, res) => {
+//   const { payload } = req.body;
+//   const { event, data } = payload;
 
-app.use("/", (req, res) => {
-  res.json("Service One");
-});
+//   switch (event) {
+//     case "UPDATE_COUNTER_TWO":
+//       db.cnt_two = data;
+//       break;
+//     case "UPDATE_COUNTER_THREE":
+//       db.cnt_three = data;
+//       break;
+//     default:
+//       console.log(`Unknown event: ${event} with data: ${JSON.stringify(data)}`);
+//   }
 
-app.listen(PORT, () => {
-  console.log(`Service One is listening to port ${PORT}`);
+//   res.json(db);
+// });
+
+app.listen(config.PORT, () => {
+  console.log(`Service One is listening to port ${config.PORT}`);
 });

@@ -1,4 +1,4 @@
-import { Prisma, PrismaClient } from "@prisma/client";
+import { PrismaClient } from "@prisma/client";
 
 const { counter: CounterModel } = new PrismaClient();
 
@@ -18,46 +18,6 @@ export class CounterRepository {
       const updatedCounter = await CounterModel.update({
         where: { id: counter.id },
         data: { value: counter.value + increment },
-      });
-
-      return updatedCounter;
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
-  async updateCounterTwo(payload: Prisma.InputJsonValue): Promise<any> {
-    try {
-      const counter = await CounterModel.findFirst();
-      if (!counter) {
-        throw new Error("Counter not found");
-      }
-
-      const updatedCounter = await CounterModel.update({
-        where: { id: counter.id },
-        data: {
-          cnt_two: payload,
-        },
-      });
-
-      return updatedCounter;
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
-  async updateCounterThree(payload: Prisma.InputJsonValue): Promise<any> {
-    try {
-      const counter = await CounterModel.findFirst();
-      if (!counter) {
-        throw new Error("Counter not found");
-      }
-
-      const updatedCounter = await CounterModel.update({
-        where: { id: counter.id },
-        data: {
-          cnt_three: payload,
-        },
       });
 
       return updatedCounter;

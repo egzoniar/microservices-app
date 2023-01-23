@@ -10,8 +10,8 @@ const PORT = process.env.PORT;
 app.use(cors());
 app.use(express.json());
 
-app.use("/service_two", proxy("http://localhost:8002"));
-app.use("/service_three", proxy("http://localhost:8003"));
+app.use("/service-two", proxy("http://localhost:8002"));
+app.use("/service-three", proxy("http://localhost:8003"));
 app.use("/", proxy("http://localhost:8001")); // service one
 
 app.listen(PORT, () => {

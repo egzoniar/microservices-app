@@ -3,11 +3,6 @@ import { Prisma, PrismaClient } from "@prisma/client";
 const { counter: CounterModel } = new PrismaClient();
 
 export class CounterRepository {
-  /**
-   * Increment counter by given value
-   * Prisma.counterGetPayload<{}> is the type of the return value of the update method of the counter model in Prisma Client
-   * (see https://www.prisma.io/docs/reference/api-reference/prisma-client-reference#update)
-   */
   async increment(increment: number): Promise<any> {
     try {
       const counter = await CounterModel.findFirst();

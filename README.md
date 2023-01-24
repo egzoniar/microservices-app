@@ -23,7 +23,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 2. Install the dependencies running the init.sh bash script in the root folder `./init.sh`
 
-3. Rename .env.example file to .env in every `service` also in `/gateway` folder and change the credentials for database connection.
+3. Rename `.env.example` file to `.env` in every `service` also in `/gateway` folder, and change the credentials for database connection in every `.env` file.
 
 4. Start the app on dev `npm run dev` or on prod `npm start`
 

@@ -7,24 +7,25 @@ This project is a simple NodeJS/Express app that utilizes micro-service architec
 ![Screen Shot 2023-01-24 at 1 16 39 AM](https://user-images.githubusercontent.com/26700417/214184264-07ec3cf4-8ff8-43d6-a389-8c639c7f5394.png)
 ![Screen Shot 2023-01-24 at 1 17 22 AM](https://user-images.githubusercontent.com/26700417/214185025-91ecd0d5-fa3b-478b-9f09-6aed627384c9.png)
 
-
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
-- NodeJS 
-- Postgres 
+- NodeJS
+- Postgres
 - Prisma
 
 ### Installing
 
 1. Clone the repository to your local machine `git clone git@github.com:egzoniar/microservices-app.git`
 
-2. Install the dependencies `npm install`
+2. Install the dependencies running the init.sh bash script in the root folder `./init.sh`
 
-3. Start the app on dev `npm run dev` or on prod `npm start`
+3. Rename .env.example file to .env in every `service` also in `/gateway` folder and change the credentials for database connection.
+
+4. Start the app on dev `npm run dev` or on prod `npm start`
 
 ## Built With
 
